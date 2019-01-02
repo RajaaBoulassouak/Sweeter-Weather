@@ -20,9 +20,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-  filter_gems_from_backtrace("gem name")
   
-  onfig.before(:each) do #cleans at beginning
+  config.before(:each) do #cleans at beginning
     DatabaseCleaner.clean
   end
   config.before(:each, :js => true) do
