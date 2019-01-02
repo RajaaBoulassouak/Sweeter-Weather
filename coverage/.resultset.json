@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/controllers/application_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1546470917
+  }
+}
