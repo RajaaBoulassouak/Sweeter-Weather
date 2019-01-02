@@ -5,6 +5,17 @@
         1,
         null
       ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/controllers/api/v1/forecast_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
       "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -16,11 +27,13 @@
         0,
         0
       ],
-      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/jobs/application_job.rb": [
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/serializers/forecast_serializer.rb": [
+        0,
+        0,
         0,
         0
       ],
-      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/controllers/application_controller.rb": [
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/jobs/application_job.rb": [
         0,
         0
       ],
@@ -37,6 +50,6 @@
         0
       ]
     },
-    "timestamp": 1546471707
+    "timestamp": 1546472337
   }
 }

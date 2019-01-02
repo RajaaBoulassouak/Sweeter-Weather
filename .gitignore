@@ -31,3 +31,7 @@
 
 # Ignore simplecov coverage
 /coverage
+/public/packs
+/public/packs-test
+/coverage/public/packs
+/node_modules

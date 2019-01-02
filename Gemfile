@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
+gem 'fast_jsonapi'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
