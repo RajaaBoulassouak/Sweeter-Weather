@@ -1,8 +1,7 @@
 class DarkSkyService 
   
   def get_forecast(coordinates)
-    coordinates = '37.8267,-122.4233'
-    get_json("/forecast/#{ENV['Dark-Sky-Key']}/#{coordinates}")
+    get_json("/forecast/#{ENV['Dark-Sky-Key']}/#{coordinates[:lat]},#{coordinates[:lng]}")
   end 
   
   private 

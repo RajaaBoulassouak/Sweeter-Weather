@@ -1,7 +1,9 @@
 class Forecast 
-  attr_reader :id
-  
+  attr_reader :id, :hourly, :daily
+
   def initialize(data)
-    @id = id
+    @id     = id
+    @hourly = data[:hourly]
+    @daily  = data[:daily]
   end
-end 
+end
