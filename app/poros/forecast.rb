@@ -15,20 +15,24 @@ class Forecast
               :daily
 
   def initialize(data)
-    @id        = id
+    @id          = id
     @latitude    = data[:latitude]
     @longitude   = data[:longitude]
-    @time        = data[:currently][:time]
+    @time        = date_time(data[:currently][:time])
     @summary     = data[:currently][:summary]
     @icon        = data[:currently][:icon]
-    @temperature = data[:currently][:temperature]
-    @feels_like  = data[:currently][:apparentTemperature]
-    @humidity    = data[:currently][:humidity]
+    @temperature = (data[:currently][:temperature]).round
+    @feels_like  = data[:currently][:apparentTemperature].round
+    @humidity    = data[:currently][:humidity]*100
     @uv_index    = data[:currently][:uvIndex]
     @visibility  = data[:currently][:visibility]
-    @today       = data[:hourly][:summary]
+    @today       = data[:daily][:data].first[:summary]
     @hourly      = hourly_forecast(data[:hourly])
     @daily       = daily_forecast(data[:daily])
+  end
+  
+  def date_time(time)
+    Time.at(time).to_datetime
   end
   
   def hourly_forecast(hourly_data)

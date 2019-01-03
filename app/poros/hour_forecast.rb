@@ -4,8 +4,12 @@ class HourForecast
               :temperature
               
   def initialize(data)
-    @time        = data[:time]
+    @time        = date_time(data[:time])
     @icon        = data[:icon]
-    @temperature = data[:temperature]
+    @temperature = data[:temperature].round
+  end
+  
+  def date_time(time)
+    Time.at(time).to_datetime
   end
 end

@@ -1,5 +1,6 @@
 class DayForecast 
-  attr_reader :summary, 
+  attr_reader :time,
+              :summary, 
               :icon, 
               :precip,
               :precip_type,
@@ -8,11 +9,16 @@ class DayForecast
               
   
   def initialize(data)
+    @time        = date_time(data[:time])
     @summary     = data[:summary]
     @icon        = data[:icon]
-    @precip      = data[:precipProbability]
+    @precip      = data[:precipProbability]*100
     @precip_type = data[:precipType]
-    @low         = data[:temperatureMin]
-    @high        = data[:temperatureMax]
+    @low         = data[:temperatureMin].round
+    @high        = data[:temperatureMax].round
+  end
+  
+  def date_time(time)
+    Time.at(time).to_datetime
   end
 end
