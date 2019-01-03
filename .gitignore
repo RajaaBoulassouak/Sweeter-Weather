@@ -27,10 +27,10 @@
 /config/master.key
 
 # Ignore RSpec examples file
-/spec/examples.txt
+# spec/examples.txt
 
 # Ignore simplecov coverage
-/coverage
+# coverage
 /public/packs
 /public/packs-test
 /coverage/public/packs
