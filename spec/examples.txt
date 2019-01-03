@@ -1,7 +1,7 @@
 example_id                                    | status | run_time        |
 --------------------------------------------- | ------ | --------------- |
-./spec/requests/forecast_spec.rb[1:1]         | passed | 0.99499 seconds |
-./spec/services/dark_sky_api_spec.rb[1:1]     | passed | 0.0054 seconds  |
-./spec/services/dark_sky_api_spec.rb[1:2]     | passed | 0.52162 seconds |
-./spec/services/geo_code_service_spec.rb[1:1] | passed | 0.01637 seconds |
-./spec/services/geo_code_service_spec.rb[1:2] | passed | 0.22136 seconds |
+./spec/requests/forecast_spec.rb[1:1]         | failed | 0.98246 seconds |
+./spec/services/dark_sky_api_spec.rb[1:1]     | passed | 0.00575 seconds |
+./spec/services/dark_sky_api_spec.rb[1:2]     | passed | 0.76236 seconds |
+./spec/services/geo_code_service_spec.rb[1:1] | passed | 0.0078 seconds  |
+./spec/services/geo_code_service_spec.rb[1:2] | passed | 0.14811 seconds |

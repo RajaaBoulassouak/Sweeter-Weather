@@ -58,7 +58,7 @@
         null,
         1,
         1,
-        1,
+        0,
         null,
         null
       ],
@@ -104,17 +104,73 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
         1,
         1,
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        8,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
-      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/serializers/forecast_serializer.rb": [
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/poros/hour_forecast.rb": [
         1,
         1,
+        null,
+        null,
+        null,
         1,
+        8,
+        8,
+        8,
+        null,
+        null
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/poros/day_forecast.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/mailers/application_mailer.rb": [
@@ -124,6 +180,24 @@
         0
       ],
       "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/rajaaboulassouak/turing/3module2/week5/sweeter-wheater/app/serializers/forecast_serializer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0
@@ -145,6 +219,6 @@
         0
       ]
     },
-    "timestamp": 1546490118
+    "timestamp": 1546497184
   }
 }
