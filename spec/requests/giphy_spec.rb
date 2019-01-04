@@ -8,7 +8,5 @@ RSpec.describe "GET /gifs?location=denver,co" do
     expect(response.status).to eq 200
 
     data = JSON.parse(response.body, symbolize_names: true)
-    # require "pry"; binding.pry
-    
   end
 end

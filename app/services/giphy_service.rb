@@ -9,8 +9,6 @@ class GiphyService
     result[:data].first[:images]
   end
 
-  private
-
   def response(url)
     @response ||= conn.get(url) do |req|
       req.params['api_key'] = ENV['Giphy-Key']
