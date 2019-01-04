@@ -12,6 +12,12 @@ class ForecastFacade
     Forecast.new(forecast_result)
   end 
   
+  def weather_gifs 
+    weather_forecast.daily.map do |day|
+      GifsService.new(day.summary)
+    end
+  end
+  
   private 
   
   def geo_code_result
