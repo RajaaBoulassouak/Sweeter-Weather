@@ -8,5 +8,10 @@ RSpec.describe "GET /gifs?location=denver,co" do
     expect(response.status).to eq 200
 
     data = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(data[:data][:attributes].count).to eq(3)
+    expect(data[:data][:attributes]).to have_key[:time]
+    expect(data[:data][:attributes]).to have_key[:summary]
+    expect(data[:data][:attributes]).to have_key[:url]
   end
 end
