@@ -10,8 +10,8 @@ RSpec.describe "POST /users" do
     user = User.last
 
     expect(response).to be_successful
+    expect(response.status).to eq(201)
     expect(user.email).to eq(email) 
-    
     data = JSON.parse(response.body, symbolize_names: true)
 
     expect(data[:data][:attributes]).to have_key(:api_key)
