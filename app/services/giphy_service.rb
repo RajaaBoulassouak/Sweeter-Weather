@@ -5,7 +5,8 @@ class GiphyService
   end
 
   def get_gif
-    results = JSON.parse(response('/v1/gifs/search?').body, symbolize_names: true)
+    result = JSON.parse(response('/v1/gifs/search?').body, symbolize_names: true)
+    result[:data].first[:images]
   end
 
   private
