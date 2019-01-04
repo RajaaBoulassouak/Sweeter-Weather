@@ -12,13 +12,15 @@ class ForecastFacade
     Forecast.new(forecast_result)
   end 
   
-  def weather_gifs 
-    weather_forecast.daily.map do |day|
+  def weather_gifs
+    gifs = weather_forecast.daily.map do |day|
       gif = GiphyService.new(day.summary).get_gif
       Gif.new(day.time, day.summary, gif)
     end
+    copyright = Copyright.new
+    Gifs.new(gifs, copyright.year)
   end
-  
+
   private 
   
   def geo_code_result

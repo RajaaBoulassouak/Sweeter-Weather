@@ -1,6 +1,5 @@
 class GifsSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :time, 
-             :summary, 
-             :url
+  attributes :gifs, 
+             :copyright
 end

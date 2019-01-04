@@ -16,5 +16,6 @@ RSpec.describe "GET /gifs?location=denver,co" do
     expect(data[:data].first[:attributes]).to have_key(:time)
     expect(data[:data].first[:attributes]).to have_key(:summary)
     expect(data[:data].first[:attributes]).to have_key(:url)
+    expect(data).to have_key(:copyright)
   end
 end
