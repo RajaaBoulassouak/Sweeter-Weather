@@ -1,9 +1,10 @@
 class Gif 
-  attr_reader :time, :summary, :gif
+  attr_reader :id, :time, :summary, :url
   
   def initialize(time, summary, gif)
+    @id      = id
     @time    = time
     @summary = summary
-    @gif     = gif[:fixed_width][:url]
+    @url     = gif[:fixed_width][:url]
   end 
 end 
