@@ -14,7 +14,8 @@ class ForecastFacade
   
   def weather_gifs 
     weather_forecast.daily.map do |day|
-      GiphyService.new(day.summary).get_gif
+      gif = GiphyService.new(day.summary).get_gif
+      Gif.new(day.time, day.summary, gif)
     end
   end
   
