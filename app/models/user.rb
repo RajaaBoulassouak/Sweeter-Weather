@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  before_create :generate_api_key
-  validates_presence_of :email, :password
-# validates :email, uniqueness: true, presence: true
-  
+  before_create :generate_api_key 
+  validates :email, uniqueness: true, presence: true
+  validates_presence_of :password
+  validates_presence_of :password_confirmation, on: :create
   has_secure_password
   
   def generate_api_key
