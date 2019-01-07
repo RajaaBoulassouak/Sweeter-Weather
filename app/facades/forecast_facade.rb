@@ -1,4 +1,4 @@
-class ForecastFacade 
+class ForecastFacade
   
   def initialize(filter = {})
     @filter = filter
@@ -13,13 +13,13 @@ class ForecastFacade
   end 
   
   def weather_gifs
-    Gifs.new(gifs, copyright.year)
+    Gifs.new(gifs, copyright.year, @filter)
   end
   
   def gifs
-      weather_forecast.daily.map do |day|
-        gif = GiphyService.new(day.summary).get_gif
-        Gif.new(day.time, day.summary, gif)
+    weather_forecast.daily.map do |day|
+      gif = GiphyService.new(day.summary).get_gif
+      Gif.new(day.time, day.summary, gif)
     end
   end
   

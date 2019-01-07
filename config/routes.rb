@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get '/forecast', to: 'forecast#index'
       get '/gifs', to: 'gifs#index'
       post '/sessions', to: 'sessions#create'
+      post 'favorites', to: 'favorites#create'
       resources :users, only: [:create]
     end
   end
