@@ -31,6 +31,8 @@ class Forecast
     @daily       = daily_forecast(data[:daily])
   end
   
+  private
+  
   def date_time(time)
     Time.at(time).to_datetime
   end

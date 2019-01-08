@@ -8,6 +8,8 @@ class GiphyService
     result = JSON.parse(response('/v1/gifs/search?').body, symbolize_names: true)
     result[:data].first[:images]
   end
+  
+  private
 
   def response(url)
     @response ||= conn.get(url) do |req|
