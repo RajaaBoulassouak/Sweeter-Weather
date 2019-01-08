@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'POST /sessions' do 
   it "returns registered user's api_key" do
-    user = User.create!(email: 'whatever@example.com', password: 'password', password_confirmation: 'password', api_key: 'jgn983hy-4d2b-4818-97c7-62b55ed23611')
+    user = User.create!(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
     user_params = { 
                     'email': 'whatever@example.com', 
                     'password': 'password' 

@@ -1,10 +1,10 @@
 class Gifs
-  attr_reader :gifs, 
-              :copyright, 
-              :filter
+  attr_reader :location,
+              :gifs, 
+              :copyright
   
-  def initialize(gifs, copyright, filter)
-    @filter    = filter
+  def initialize(gifs, copyright, location)
+    @location  = location
     @gifs      = gifs 
     @copyright = copyright
   end

@@ -1,4 +1,5 @@
 class ForecastFacade
+  attr_reader :filter
   
   def initialize(filter = {})
     @filter = filter
@@ -9,7 +10,7 @@ class ForecastFacade
   end
   
   def weather_forecast
-    Forecast.new(forecast_result)
+    Forecast.new(forecast_result, @filter)
   end 
   
   def weather_gifs
