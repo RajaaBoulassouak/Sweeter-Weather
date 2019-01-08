@@ -2,8 +2,8 @@ class Api::V1::SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
   
   def create
-    user = User.find_by(email: params[:email])
-    user && user.authenticate(params[:password]) or not_found
+    user = User.find_by(email: user_params[:email])
+    user && user.authenticate(user_params[:password]) or not_found
     session[:user_id] = user.id
     render json: UserSerializer.new(user), status: 200
   end
@@ -11,6 +11,6 @@ class Api::V1::SessionsController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.permit(:email, :password)
   end
 end

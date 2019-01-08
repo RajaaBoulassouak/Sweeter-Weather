@@ -1,5 +1,5 @@
 class Forecast 
-  attr_reader :id, 
+  attr_reader :location, 
               :latitude,
               :longitude,
               :time,
@@ -14,8 +14,8 @@ class Forecast
               :hourly, 
               :daily
 
-  def initialize(data)
-    @id          = id
+  def initialize(data, location)
+    @location    = location
     @latitude    = data[:latitude]
     @longitude   = data[:longitude]
     @time        = date_time(data[:currently][:time])
