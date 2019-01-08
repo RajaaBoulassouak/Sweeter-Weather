@@ -9,6 +9,8 @@ class HourForecast
     @temperature = data[:temperature].round
   end
   
+  private
+  
   def date_time(time)
     Time.at(time).to_datetime
   end

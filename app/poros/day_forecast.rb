@@ -18,6 +18,8 @@ class DayForecast
     @high        = data[:temperatureMax].round
   end
   
+  private
+  
   def date_time(time)
     Time.at(time).to_datetime
   end

@@ -3,10 +3,6 @@ class ForecastFacade
   
   def initialize(filter = {})
     @filter = filter
-  end 
-  
-  def coordinates
-    geo_code_result
   end
   
   def weather_forecast
@@ -16,6 +12,8 @@ class ForecastFacade
   def weather_gifs
     Gifs.new(gifs, copyright.year, @filter)
   end
+  
+  private 
   
   def gifs
     weather_forecast.daily.map do |day|
@@ -27,8 +25,10 @@ class ForecastFacade
   def copyright
     Copyright.new
   end
-
-  private 
+  
+  def coordinates
+    geo_code_result
+  end
   
   def geo_code_result
     @result ||= geo_code_service.get_coordinates
