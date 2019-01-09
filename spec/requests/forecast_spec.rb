@@ -8,8 +8,8 @@ RSpec.describe 'GET /forecast?location=denver,co' do
     expect(response.status).to eq 200
 
     data = JSON.parse(response.body, symbolize_names: true)
-    
-    expect(data[:data][:attributes]).to have_key(:hourly)
-    expect(data[:data][:attributes]).to have_key(:daily)
+    expect(data[:data][:attributes]).to have_key(:current_weather)
+    expect(data[:data][:attributes]).to have_key(:daily_forecast)
+    expect(data[:data][:attributes]).to have_key(:hourly_forecast)
   end
 end

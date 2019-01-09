@@ -3,14 +3,14 @@ class Api::V1::FavoritesController < ApplicationController
   before_action :authorize
   
   def index 
-    favorites = user.favorites.map do |fave|
-      ForecastFacade.new(fave.location).weather_forecast
+    favorites = current_user.favorites.map do |fave|
+      ForecastFacade.new(fave.location).current_weather
     end
-    render json: ForecastSerializer.new(favorites)
+    render json: CurrentWeatherSerializer.new(favorites)
   end
   
   def create
-    favorite = user.favorites.create(location: params[:location])
+    favorite = current_user.favorites.create(location: params[:location])
     render json: favorite, status: 201
   end
 end

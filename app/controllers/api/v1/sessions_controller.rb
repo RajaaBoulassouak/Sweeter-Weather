@@ -3,9 +3,9 @@ class Api::V1::SessionsController < ApplicationController
   
   def create
     user = User.find_by(email: user_params[:email])
-    user && user.authenticate(user_params[:password]) or not_found
+    (user && user.authenticate(user_params[:password])) or (not_found && return)
     session[:user_id] = user.id
-    render json: UserSerializer.new(user), status: 200
+    render json: UserSerializer.new(user), status: 200 
   end
   
   private

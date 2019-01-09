@@ -70,8 +70,8 @@ RSpec.describe 'GET /favorites' do
     expect(data[:data].count).to eq(2)
     expect(data[:data].first[:id]).to eq("Denver, CO")
     expect(data[:data].second[:id]).to eq("Golden, CO")
-    expect(data[:data].first[:type]).to eq("forecast")
-    expect(data[:data].second[:type]).to eq("forecast")
+    expect(data[:data].first[:type]).to eq("current_weather")
+    expect(data[:data].second[:type]).to eq("current_weather")
     expect(data[:data].first[:attributes]).to have_key(:temperature)
     expect(data[:data].second[:attributes]).to have_key(:temperature)
   end
